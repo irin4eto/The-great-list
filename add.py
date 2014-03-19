@@ -2,7 +2,12 @@ import os
 
 class Add():
     def __init__(self, list_identifier):
-        self.list_identifier = list_identifier
+        if list_identifier > len(show_lists.ShowLists.show_lists()):
+            self.list_identifier = 1
+            print("Incorrect list identificier.Write new list identifier.)
+            print("Another way people will be added to first list")
+        else:
+            self.list_identifier = list_identifier
 
     def add(self):
         name = input("name> ")
@@ -18,3 +23,4 @@ class Add():
         for file_name in all_files:
             if str(self.list_identifier) in file_name:
                 return file_name
+
