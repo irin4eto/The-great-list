@@ -9,6 +9,7 @@ class TestCreate(unittest.TestCase):
 
     def test_create(self):
         self.c = create.Create("HackBulgaria")
+        print(self.c.list_name)
 
         self.c.create()
         self.assertEqual(True, os.path.isfile(self.c.list_name))
