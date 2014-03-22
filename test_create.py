@@ -8,12 +8,12 @@ import os
 class TestCreate(unittest.TestCase):
 
     def test_create(self):
-        self.c = create.Create("HackBulgaria")
+        creating = create.Create("HackBulgaria")
 
-        self.c.create()
-        self.assertEqual(True, os.path.isfile(self.c.list_name))
+        creating.create()
+        self.assertEqual(True, os.path.isfile(creating.list_name))
 
-        os.remove(self.c.list_name)
+        os.remove(creating.list_name)
 
 if __name__ == '__main__':
     unittest.main()
