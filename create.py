@@ -8,4 +8,4 @@ class Create():
     def create(self):
         file = open(self.list_name, "w")
         file.close()
-
+        return self.list_name

@@ -13,4 +13,11 @@ class ShowLists:
                 files.append(i[:length-4])
         return files
 
+def main():
+    my_show = ShowLists()
+    print(my_show.show_lists())
+
+if __name__ == '__main__':
+    main()
+
 
