@@ -5,8 +5,8 @@ class Export():
     def __init__(self, list_identificier):
         if list_identificier > len(show_lists.ShowLists.show_lists()):
             self.list_identificier = 1
-            print("Incorrect list identificier.Write new list identifier.")
-            print("Another way exporting will be made to the first list")
+            print("Incorrect list identificier.")
+            print("Exporting will be made to the first list")
         else:
             self.list_identificier = list_identificier
 

@@ -7,6 +7,7 @@ class TestExport(unittest.TestCase):
 
     def setUp(self):
         self.file_name = "[1] HackBulgaria.txt"
+        self.json_name = "[1] HackBulgaria.json"
         self.file_handle = open(self.file_name, "w")
         self.exporting = export.Export(1)
 
@@ -18,7 +19,7 @@ class TestExport(unittest.TestCase):
 
         self.assertEqual(True, os.path.isfile("[1] HackBulgaria.json"))
 
-        file_reader = open("[1] HackBulgaria.json", "r")
+        file_reader = open(self.json_name, "r")
         contents = file_reader.read()
         file_reader.close()
 
@@ -26,6 +27,7 @@ class TestExport(unittest.TestCase):
 
     def tearDown(self):
         os.remove(self.file_name)
+        os.remove(self.json_name)
 
 if __name__ == '__main__':
     unittest.main()
