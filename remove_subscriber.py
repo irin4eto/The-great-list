@@ -1,11 +1,12 @@
 import show_lists
 
+
 class Remove():
     def __init__(self, list_identifier, name_identifier):
         if list_identifier > len(show_lists.ShowLists.show_lists()):
             self.list_identificier = 1
-            print("Incorrect list identificier.Write new list identifier.")
-            print("Another way removing will be made to the first list")
+            print("Incorrect list identificier.")
+            print("Removing will be made to the first list")
         else:
             self.list_identifier = list_identifier
         self.name_identifier = name_identifier
